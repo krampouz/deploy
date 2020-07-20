@@ -7,7 +7,14 @@
 
 #>
 
+
 Set-PSDebug -Trace 1
+<# Groupe de travail APAJH 22-29-35 et nom ordinateur#>
+
+Add-Computer -WorkGroupName "APAJH 22-29-35"
+
+Rename-Computer
+
 
 <# Services de telemetrie - supprime si service existe #>
 Set-Service -Name DiagTrack -StartupType Disabled
@@ -131,9 +138,6 @@ Invoke-WebRequest -Uri "https://www.dwservice.net/download/dwagent_x86.exe" -Out
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 Start-Process -FilePath "c:\informatique\dwagent_x86.exe"
 
-<# Groupe de travail APAJH 22-29-35 #>
-
-Add-Computer -WorkGroupName "APAJH 22-29-35"
 
 <# INFORMATION ORDI + génération rapport html#>
 
@@ -216,3 +220,6 @@ $Report = ConvertTo-HTML -Body "$ComputerName $OSinfo $ProcessInfo $BiosInfo $Di
 #The command below will generate the report to an HTML file
 $Report | Out-File .\\Basic-Ordi-Rapport.html
 Start-Process "Basic-Ordi-Rapport.html"
+
+<# Reboot ordi #>
+Restart-Computer -confirm
