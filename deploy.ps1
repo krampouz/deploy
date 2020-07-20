@@ -204,7 +204,7 @@ $ServicesInfo = $ServicesInfo -replace '<td>Stopped</td>','<td class="StopStatus
 
   
 #The command below will combine all the information gathered into a single HTML report
-$Report = ConvertTo-HTML -Body "$ComputerName $OSinfo $ProcessInfo $BiosInfo $DiscInfo $ServicesInfo" -Head $header -Title "Computer Information Report" -PostContent "<p id='CreationDate'>Date édition: $(Get-Date)</p>"
+$Report = ConvertTo-HTML -Body "$ComputerName $OSinfo $ProcessInfo $BiosInfo $DiscInfo $ServicesInfo" -Head $header -Title "Computer Information Report" -PostContent "<p id='CreationDate'>Date Edition: $(Get-Date)</p>"
 
 #The command below will generate the report to an HTML file
 $Report | Out-File .\\Basic-Ordi-Rapport.html
