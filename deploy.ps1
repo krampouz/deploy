@@ -1,4 +1,12 @@
-<# Pour executer le script = Set-ExecutionPolicy RemoteSigned #>
+<# 
+
+Pour executer le script = Set-ExecutionPolicy RemoteSigned 
+Lancer PowerShell en administrateur
+PS c:\...> Set-ExecutionPolicy RemoteSigned
+PS c:\...> Invoke-WebRequest https://frama.link/deploy2001 -OutFile C:\informatique\deploy.ps1
+PS c:\...> C:\informatique\deploy.ps1
+
+#>
 
 Set-PSDebug -Trace 1
 
