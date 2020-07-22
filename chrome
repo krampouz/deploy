@@ -1,3 +1,15 @@
+    $caption = "Voulez-vous installer Google Chrome?"    
+    $message = "Saisir 'Y' pour installer Chrome"
+    [int]$defaultChoice = 0
+    $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Installer Chrome"
+    $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "Continuer"
+    $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
+    $choiceRTN = $host.ui.PromptForChoice($caption,$message, $options,$defaultChoice)
+
+if ( $choiceRTN -ne 1 )
+{
+   function Install-Chrome
+{
 $LocalTempDir = $env:TEMP; 
     $ChromeInstaller = "ChromeInstaller.exe"; 
     $url='http://dl.google.com/chrome/install/latest/chrome_installer.exe'; 
