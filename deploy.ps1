@@ -230,7 +230,7 @@ Start-Process "Basic-Ordi-Rapport.html"
 
 <# parametres veille ecran pour tous les utilisateurs #>
 start-process gpedit
-start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge https://github.com/krampouz/deploy/blob/master/screensave.png
+start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge https://https://raw.githubusercontent.com/krampouz/deploy/master/screensave.png
 
 <# Pave numerique active #>
 reg add "HKEY_USERS\.DEFAULT\Control Panel\Keyboard" /v InitialKeyboardIndicators /t REG_SZ /d 2 /F
