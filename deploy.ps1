@@ -222,15 +222,15 @@ $ServicesInfo = $ServicesInfo -replace '<td>Stopped</td>','<td class="StopStatus
 $Report = ConvertTo-HTML -Body "$ComputerName $OSinfo $ProcessInfo $BiosInfo $DiscInfo $ServicesInfo" -Head $header -Title "Computer Information Report" -PostContent "<p id='CreationDate'>Date Edition: $(Get-Date)</p>"
 
 #The command below will generate the report to an HTML file
-$Report | Out-File .\\Basic-Ordi-Rapport.html
-Start-Process "Basic-Ordi-Rapport.html"
+$Report | Out-File c:\informatique\Basic-Ordi-Rapport.html
+Start-Process "c:\informatique\Basic-Ordi-Rapport.html"
 
 <# Reboot ordi #>
 #Restart-Computer -confirm
 
 <# parametres veille ecran pour tous les utilisateurs #>
 start-process gpedit
-start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge https://https://raw.githubusercontent.com/krampouz/deploy/master/screensave.png
+start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge https://raw.githubusercontent.com/krampouz/deploy/master/screensave.png
 
 <# Pave numerique active #>
 reg add "HKEY_USERS\.DEFAULT\Control Panel\Keyboard" /v InitialKeyboardIndicators /t REG_SZ /d 2 /F
