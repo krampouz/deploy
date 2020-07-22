@@ -119,7 +119,10 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Google\GCPW" /v enable_dm_enrollment /t REG
 Invoke-WebRequest -Uri "https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.142/OpenShellSetup_4_4_142.exe" -OutFile "c:\informatique\OpenShellSetup_4_4_142.exe"
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 Start-Process -FilePath "c:\informatique\OpenShellSetup_4_4_142.exe" -ArgumentList "/quiet"
+<# Lancement GPEDIT #>
 
+Invoke-WebRequest -Uri "https://github.com/krampouz/deploy/blob/master/screensave.png" -OutFile "c:\informatique\screensave.png"
+Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 
 <# TELEMETRY WDP #>
 Invoke-WebRequest -Uri "https://wpd.app/get/latest.zip" -OutFile "c:\informatique\WPD.zip"
@@ -226,4 +229,4 @@ Start-Process "Basic-Ordi-Rapport.html"
 #Restart-Computer -confirm
 
 start-process gpedit
-
+start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge http://www.google.com
