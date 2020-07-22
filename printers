@@ -1,0 +1,21 @@
+# Get-PrinterDriver
+
+# IMPRIMANTE 22_1
+$portName = "IP_192.168.xx.xx"
+$checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
+if (-not $checkPortExists) {
+Add-PrinterPort -name $portName -PrinterHostAddress "192.168.xx.xx"
+}
+
+Add-Printer -Name NomDelImprimante -DriverName "Driver listé dans get-PrinterDriver" -PortName IP_192.168.xx.xx
+
+
+
+# IMPRIMANTE 22_2
+$portName = "IP_192.168.xx.xx"
+$checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
+if (-not $checkPortExists) {
+Add-PrinterPort -name $portName -PrinterHostAddress "192.168.xx.xx"
+}
+
+Add-Printer -Name NomDelImprimante -DriverName "Driver listé dans get-PrinterDriver" -PortName IP_192.168.xx.xx
