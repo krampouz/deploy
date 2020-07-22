@@ -228,8 +228,6 @@ Start-Process "Basic-Ordi-Rapport.html"
 <# Reboot ordi #>
 #Restart-Computer -confirm
 
+<# parametres veille ecran pour tous les utilisateurs #>
 start-process gpedit
-Invoke-WebRequest -Uri "https://github.com/krampouz/deploy/blob/master/screensave.png" -OutFile "c:\informatique\screensaver.png"
-Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
-
-start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge c:\informatique\screensaver.png
+start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge https://github.com/krampouz/deploy/blob/master/screensave.png
