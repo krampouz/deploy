@@ -1,6 +1,4 @@
-function Install-Chrome
-{
-    $LocalTempDir = $env:TEMP; 
+$LocalTempDir = $env:TEMP; 
     $ChromeInstaller = "ChromeInstaller.exe"; 
     $url='http://dl.google.com/chrome/install/latest/chrome_installer.exe'; 
     $output="$LocalTempDir\$ChromeInstaller"
@@ -21,3 +19,8 @@ function Install-Chrome
 }
 
 Install-Chrome
+}
+else
+{
+   "Le Script Continue"
+}
