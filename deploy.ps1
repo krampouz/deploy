@@ -223,4 +223,4 @@ $Report | Out-File .\\Basic-Ordi-Rapport.html
 Start-Process "Basic-Ordi-Rapport.html"
 
 <# Reboot ordi #>
-Restart-Computer -confirm
+#Restart-Computer -confirm
