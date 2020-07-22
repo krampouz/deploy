@@ -29,8 +29,7 @@ $LocalTempDir = $env:TEMP;
     }
 
 }
-
-Install-Chrome
+Install-DFS
 }
 else
 {
