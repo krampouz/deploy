@@ -229,4 +229,7 @@ Start-Process "Basic-Ordi-Rapport.html"
 #Restart-Computer -confirm
 
 start-process gpedit
-start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge http://www.google.com
+Invoke-WebRequest -Uri "https://github.com/krampouz/deploy/blob/master/screensave.png" -OutFile "c:\informatique\screensaver.png"
+Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+
+start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge c:\informatique\screensaver.png
