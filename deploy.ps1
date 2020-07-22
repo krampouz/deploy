@@ -224,3 +224,6 @@ Start-Process "Basic-Ordi-Rapport.html"
 
 <# Reboot ordi #>
 #Restart-Computer -confirm
+
+start-process gpedit
+
