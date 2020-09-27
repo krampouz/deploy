@@ -125,7 +125,7 @@ Invoke-WebRequest -Uri "https://github.com/krampouz/deploy/blob/master/screensav
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 
 <# TELEMETRY WDP #>
-Invoke-WebRequest -Uri "https://wpd.app/get/latest.zip" -OutFile "c:\informatique\WPD.zip"
+Invoke-WebRequest -Uri "http://support.apajh22-29-35.info/latest.zip" -OutFile "c:\informatique\WPD.zip"
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 Expand-Archive -Path c:\informatique\WPD.zip c:\informatique\
 Start-Process -FilePath "c:\informatique\WPD.exe"
