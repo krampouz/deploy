@@ -125,7 +125,7 @@ Invoke-WebRequest -Uri "https://github.com/krampouz/deploy/blob/master/screensav
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 
 <# TELEMETRY WDP #>
-Invoke-WebRequest -Uri "http://support.apajh22-29-35.info/latest.zip" -OutFile "c:\informatique\WPD.zip"
+Invoke-WebRequest -Uri "https://wpd.app/get/latest.zip" -OutFile "c:\informatique\WPD.zip"
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 Expand-Archive -Path c:\informatique\WPD.zip c:\informatique\
 Start-Process -FilePath "c:\informatique\WPD.exe"
@@ -134,7 +134,7 @@ Start-Process -FilePath "c:\informatique\WPD.exe"
 <# Fusion inventory 2.5.2 #>
 Invoke-WebRequest -Uri "https://github.com/fusioninventory/fusioninventory-agent/releases/download/2.5.2/fusioninventory-agent_windows-x64_2.5.2.exe" -OutFile "c:\informatique\fi252.exe"
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
-Start-Process -FilePath "c:\informatique\fi252.exe" -ArgumentList "/acceptlicense /runnow /server='http://intranet.apajh22-29-35.org/glpi/plugins/fusioninventory/' /S /no-ssl-check /add-firewall-exception /execmode=service /installtype=from-scratch"
+Start-Process -FilePath "c:\informatique\fi252.exe" -ArgumentList "/acceptlicense /runnow /server='https://intranet.apajh22-29-35.org/glpi/plugins/fusioninventory/' /S /no-ssl-check /add-firewall-exception /execmode=service /installtype=from-scratch"
 
 
 <# DW Agent #>
